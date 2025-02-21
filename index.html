@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Javi</title>
+    <style>
+        body {
+            background-color: #f5e8c7; /* Light bamboo beige */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            flex-direction: column;
+        }
+        canvas {
+            border: 4px solid #d90429; /* Japanese red */
+            background-color: #2a9d8f; /* Bamboo green */
+            display: none; /* Hidden until Start */
+        }
+        h1 {
+            color: #d90429;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #e76f51;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #startButton {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #e76f51; /* Sakura orange */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #startButton:hover {
+            background-color: #f4a261; /* Lighter orange */
+        }
+        #keyboard {
+            display: none; /* Hidden until Start */
+            margin-top: 20px;
+        }
+        .arrow-btn {
+            width: 60px;
+            height: 60px;
+            background-color: #e76f51; /* Sakura orange */
+            color: white;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            touch-action: manipulation; /* Prevents zooming on touch */
+        }
+        .arrow-btn:active {
+            background-color: #f4a261; /* Lighter orange on press */
+        }
+        #keyboard div {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Snake Javi</h1>
+    <h2>🐍 Please feed as many nigiris to Javi as possible! 🍣</h2>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <button id="startButton">Start Game</button>
+    <button id="toggleMusicButton">Pause Music</button>
+    <div id="keyboard">
+        <div>
+            <button class="arrow-btn" id="upBtn">↑</button>
+        </div>
+        <div>
+            <button class="arrow-btn" id="leftBtn">←</button>
+            <button class="arrow-btn" id="downBtn">↓</button>
+            <button class="arrow-btn" id="rightBtn">→</button>
+        </div>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="Fireboy DML - Coming Back For You (Vidojean X Oliver Loenn Afro House Remix) - PLAYED BY KEINEMUSIK.mp3" type="audio/mp3">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
